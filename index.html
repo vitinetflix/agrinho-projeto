@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho Agro Sustentável</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+}
+
+.acessibilidade{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.acessibilidade button{
+    padding: 8px 12px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.pular{
+    position:absolute;
+    left:-9999px;
+}
+
+.pular:focus{
+    left:10px;
+    top:10px;
+    background:#fff;
+    padding:10px;
+    border:2px solid #000;
+}
+</style>
+</head>
+
+<body>
+
+<a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+<div class="acessibilidade" aria-label="Controles de acessibilidade">
+    <button onclick="aumentarFonte()" aria-label="Aumentar texto">A+</button>
+    <button onclick="diminuirFonte()" aria-label="Diminuir texto">A-</button>
+</div>
+
+<header>
+    <h1>🌱 Projeto do Agrinho 🌱</h1>
+    <p>Como cuidar e zelar do meio ambiente</p>
+</header>
+
+<nav aria-label="Menu principal">
+    <a href="#sobre">Sobre</a>
+    <a href="#cuidados">Cuidados</a>
+    <a href="#plantas">Plantas</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<main id="conteudo">
+
+<section id="hero">
+    <h2>Bem-vindo ao meu projeto do Agrinho 🌱</h2>
+    <p>Descubra maneiras de cuidar do meio ambiente, das plantas e das árvores.</p>
+    <button id="btnMensagem">Receber Dica</button>
+</section>
+
+<section id="sobre">
+    <h2>Sobre o cuidado com o meio ambiente</h2>
+    <p>
+        O meio ambiente é o conjunto de tudo o que existe na natureza e que permite a vida no planeta:
+        ar, água, solo, plantas, animais e ecossistemas.
+        Cuidar dele é fundamental para a saúde, a economia e o bem-estar das pessoas.
+    </p>
+</section>
+
+<section id="cuidados">
+    <h2>Melhores formas de cuidar do meio ambiente</h2>
+
+    <div class="cards-container">
+
+        <article class="card">
+            <h3>Combater a Poluição</h3>
+            <p>Não jogue lixo no chão, na mata ou na rua. Sempre descarte corretamente.</p>
+        </article>
+
+        <article class="card">
+            <h3>Evitar o Desmatamento</h3>
+            <p>Preserve árvores e florestas para proteger o clima e a biodiversidade.</p>
+        </article>
+
+        <article class="card">
+            <h3>Prevenir Queimadas</h3>
+            <p>Não brinque com fogo perto de áreas verdes e plantações.</p>
+        </article>
+
+    </div>
+</section>
+
+<section>
+    <h2>O que é recomendado fazer?</h2>
+
+    <ul>
+        <li>Não desmatar.</li>
+        <li>Não provocar queimadas.</li>
+        <li>Não jogar lixo no chão.</li>
+        <li>Guardar e descartar corretamente os resíduos.</li>
+        <li>Cuidar das plantações.</li>
+        <li>Plantar mais árvores.</li>
+    </ul>
+</section>
+
+<section id="quiz">
+    <h2>Quiz Rápido</h2>
+
+    <p>O que fazer com o seu lixo?</p>
+
+    <button onclick="verificarResposta('jogar no chão')">Jogar no chão</button>
+    <button onclick="verificarResposta('jogar na mata')">Jogar na mata</button>
+    <button onclick="verificarResposta('guardar e jogar no lixo')">
+        Guardar e jogar no lixo
+    </button>
+
+    <p id="resultado" aria-live="polite"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Agrinho e Vitinho no cuidado com o meio ambiente</p>
+</footer>
+
+<script>
+let tamanhoFonte = 100;
+
+function aumentarFonte(){
+    tamanhoFonte += 10;
+    document.body.style.fontSize = tamanhoFonte + "%";
+}
+
+function diminuirFonte(){
+    if(tamanhoFonte > 70){
+        tamanhoFonte -= 10;
+        document.body.style.fontSize = tamanhoFonte + "%";
+    }
+}
+
+function verificarResposta(resposta){
+    const resultado = document.getElementById("resultado");
+
+    if(resposta === "guardar e jogar no lixo"){
+        resultado.textContent = "✅ Correto! O lixo deve ser descartado corretamente.";
+    } else {
+        resultado.textContent = "❌ Incorreto! O lixo deve ser guardado e jogado no lixo.";
+    }
+}
+</script>
+
+</body>
+</html>
 
