@@ -3,91 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agrinho Agro Sustentável</title>
-<link rel="stylesheet" href="style.css">
+<title>Agrinho - Agro Sustentável</title>
 
 <style>
 body{
     font-family: Arial, sans-serif;
-    font-size: 100%;
-    line-height: 1.6;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background:#f4fff4;
+    color:#333;
+    transition: filter 0.3s;
+}
+
+header{
+    background:green;
+    color:white;
+    padding:20px;
+}
+
+nav{
+    background:#0b7a0b;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+section{
+    padding:20px;
+}
+
+.cards-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    width:250px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:green;
+    color:white;
+}
+
+button:hover{
+    background:#0b7a0b;
 }
 
 .acessibilidade{
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-
-.acessibilidade button{
-    padding: 8px 12px;
-    margin: 2px;
-    cursor: pointer;
-}
-
-.pular{
-    position:absolute;
-    left:-9999px;
-}
-
-.pular:focus{
-    left:10px;
+    position:fixed;
     top:10px;
-    background:#fff;
+    right:10px;
+    background:white;
     padding:10px;
-    border:2px solid #000;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+footer{
+    background:#222;
+    color:white;
+    padding:15px;
 }
 </style>
 </head>
 
 <body>
 
-<a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+<div class="acessibilidade">
+    <h3>Acessibilidade</h3>
 
-<div class="acessibilidade" aria-label="Controles de acessibilidade">
-    <button onclick="aumentarFonte()" aria-label="Aumentar texto">A+</button>
-    <button onclick="diminuirFonte()" aria-label="Diminuir texto">A-</button>
-</div>
-
-<div class="acessibilidade" aria-label="Controles de acessibilidade">
     <button onclick="aumentarFonte()" aria-label="Aumentar texto">A+</button>
     <button onclick="diminuirFonte()" aria-label="Diminuir texto">A-</button>
 
-    <button onclick="aumentarBrilho()" aria-label="Aumentar brilho">
-        ☀️+
-    </button>
+    <br><br>
 
-    <button onclick="diminuirBrilho()" aria-label="Diminuir brilho">
-        ☀️-
-    </button>
+    <button onclick="aumentarBrilho()" aria-label="Aumentar brilho">☀+</button>
+    <button onclick="diminuirBrilho()" aria-label="Diminuir brilho">☀-</button>
 </div>
 
 <header>
-    <h1>🌱 Projeto do Agrinho 🌱</h1>
-    <p>Como cuidar e zelar do meio ambiente</p>
+    <h1>🌱 Projeto Agrinho 🌱</h1>
+    <p>Como cuidar e preservar o meio ambiente</p>
 </header>
 
-<nav aria-label="Menu principal">
+<nav>
     <a href="#sobre">Sobre</a>
     <a href="#cuidados">Cuidados</a>
     <a href="#plantas">Plantas</a>
     <a href="#quiz">Quiz</a>
 </nav>
 
-<main id="conteudo">
-
 <section id="hero">
-    <h2>Bem-vindo ao meu projeto do Agrinho 🌱</h2>
-    <p>Descubra maneiras de cuidar do meio ambiente, das plantas e das árvores.</p>
+    <h2>Bem-vindo ao meu Projeto Agrinho 🌱</h2>
+    <p>
+        Descubra maneiras simples de cuidar do meio ambiente,
+        das plantas e das árvores.
+    </p>
+
     <button id="btnMensagem">Receber Dica</button>
 </section>
 
 <section id="sobre">
     <h2>Sobre o cuidado com o meio ambiente</h2>
+
     <p>
-        O meio ambiente é o conjunto de tudo o que existe na natureza e que permite a vida no planeta:
-        ar, água, solo, plantas, animais e ecossistemas.
-        Cuidar dele é fundamental para a saúde, a economia e o bem-estar das pessoas.
+        O meio ambiente é formado pelo ar, água, solo, plantas,
+        animais e todos os ecossistemas que permitem a vida no planeta.
+        Cuidar dele é fundamental para a saúde e o bem-estar das pessoas.
+    </p>
+
+    <p>
+        Problemas como queimadas, poluição e desmatamento causam
+        grandes impactos ambientais e devem ser evitados.
     </p>
 </section>
 
@@ -96,34 +141,44 @@ body{
 
     <div class="cards-container">
 
-        <article class="card">
-            <h3>Combater a Poluição</h3>
-            <p>Não jogue lixo no chão, na mata ou na rua. Sempre descarte corretamente.</p>
-        </article>
+        <div class="card">
+            <h3>♻️ Combater a Poluição</h3>
+            <p>
+                Não jogue lixo no chão, em matas ou plantações.
+                Guarde o lixo até encontrar uma lixeira.
+            </p>
+        </div>
 
-        <article class="card">
-            <h3>Evitar o Desmatamento</h3>
-            <p>Preserve árvores e florestas para proteger o clima e a biodiversidade.</p>
-        </article>
+        <div class="card">
+            <h3>🌳 Evitar o Desmatamento</h3>
+            <p>
+                Preservar árvores e florestas ajuda a manter o clima,
+                a biodiversidade e a produção de alimentos.
+            </p>
+        </div>
 
-        <article class="card">
-            <h3>Prevenir Queimadas</h3>
-            <p>Não brinque com fogo perto de áreas verdes e plantações.</p>
-        </article>
+        <div class="card">
+            <h3>🔥 Prevenir Queimadas</h3>
+            <p>
+                Não faça brincadeiras com fogo próximo de áreas verdes,
+                pois isso pode causar grandes desastres ambientais.
+            </p>
+        </div>
 
     </div>
 </section>
 
-<section>
+<section id="plantas">
     <h2>O que é recomendado fazer?</h2>
 
-    <ul>
+    <ul style="display:inline-block; text-align:left;">
         <li>Não desmatar.</li>
         <li>Não provocar queimadas.</li>
-        <li>Não jogar lixo no chão.</li>
-        <li>Guardar e descartar corretamente os resíduos.</li>
+        <li>Não poluir.</li>
+        <li>Guardar o lixo até encontrar uma lixeira.</li>
         <li>Cuidar das plantações.</li>
         <li>Plantar mais árvores.</li>
+        <li>Reciclar sempre que possível.</li>
     </ul>
 </section>
 
@@ -132,43 +187,83 @@ body{
 
     <p>O que fazer com o seu lixo?</p>
 
-    <button onclick="verificarResposta('jogar no chão')">Jogar no chão</button>
-    <button onclick="verificarResposta('jogar na mata')">Jogar na mata</button>
-    <button onclick="verificarResposta('guardar e jogar no lixo')">
-        Guardar e jogar no lixo
+    <button onclick="verificarResposta('chao')">
+        Jogar no chão
     </button>
 
-    <p id="resultado" aria-live="polite"></p>
+    <button onclick="verificarResposta('mata')">
+        Jogar na mata
+    </button>
+
+    <button onclick="verificarResposta('lixo')">
+        Guardar e jogar na lixeira
+    </button>
+
+    <p id="resultado"></p>
 </section>
 
-</main>
-
 <footer>
-    <p>© 2026 Agrinho e Vitinho no cuidado com o meio ambiente</p>
+    <p>© 2026 Projeto Agrinho - Cuidando do Meio Ambiente 🌱</p>
 </footer>
 
 <script>
 let tamanhoFonte = 100;
+let brilho = 100;
 
-function aumentarFonte(){
+// Zoom
+function aumentarFonte() {
     tamanhoFonte += 10;
     document.body.style.fontSize = tamanhoFonte + "%";
 }
 
-function diminuirFonte(){
+function diminuirFonte() {
     if(tamanhoFonte > 70){
         tamanhoFonte -= 10;
         document.body.style.fontSize = tamanhoFonte + "%";
     }
 }
 
+// Brilho
+function aumentarBrilho() {
+    if(brilho < 150){
+        brilho += 10;
+        document.body.style.filter = `brightness(${brilho}%)`;
+    }
+}
+
+function diminuirBrilho() {
+    if(brilho > 50){
+        brilho -= 10;
+        document.body.style.filter = `brightness(${brilho}%)`;
+    }
+}
+
+// Dicas
+const dicas = [
+    "🌳 Plante uma árvore.",
+    "♻️ Separe o lixo reciclável.",
+    "💧 Economize água.",
+    "🔌 Desligue aparelhos sem uso.",
+    "🚲 Use bicicleta quando possível."
+];
+
+document.getElementById("btnMensagem").addEventListener("click", () => {
+    const dica = dicas[Math.floor(Math.random() * dicas.length)];
+    alert(dica);
+});
+
+// Quiz
 function verificarResposta(resposta){
     const resultado = document.getElementById("resultado");
 
-    if(resposta === "guardar e jogar no lixo"){
-        resultado.textContent = "✅ Correto! O lixo deve ser descartado corretamente.";
+    if(resposta === "lixo"){
+        resultado.innerHTML =
+        "✅ Correto! O lixo deve ser guardado e jogado na lixeira.";
+        resultado.style.color = "green";
     } else {
-        resultado.textContent = "❌ Incorreto! O lixo deve ser guardado e jogado no lixo.";
+        resultado.innerHTML =
+        "❌ Incorreto! Nunca jogue lixo no chão ou na mata.";
+        resultado.style.color = "red";
     }
 }
 </script>
